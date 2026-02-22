@@ -28,21 +28,21 @@ FLEXASR_HOME ?= $(ROOT)/cmod
 
 
 # PLEASE SET BOOST_HOME, SYSTEMC_HOME, CATAPULT_HOME to correct path 
-BOOST_HOME ?= <path_to_boost_installation>
-SYSTEMC_HOME ?= <path_to_systemc-2.3.1>
-CATAPULT_HOME ?= <path_to_Catapult_Synthesis_10.5_installation>
+BOOST_HOME ?= /home/users/sawyerl/miniconda3
+SYSTEMC_HOME ?= /cad/mentor/2024.2_1/Mgc_home/shared
+CATAPULT_HOME ?= /cad/mentor/2024.2_1/Mgc_home
 
 CC = g++
 
 INCDIR ?=
-INCDIR += -I. -I$(SYSTEMC_HOME)/include -I$(BOOST_HOME)/include -I$(CATAPULT_HOME)/Mgc_home/shared/include
+INCDIR += -I. -I$(SYSTEMC_HOME)/include -I$(BOOST_HOME)/include -I$(CATAPULT_HOME)/shared/include
 INCDIR += -I$(RAPIDJSON_HOME)/include 
 INCDIR += -I$(MATCHLIB_HOME)/include 
 INCDIR += -I$(FLEXASR_HOME)/include
 INCDIR += -I$(FLEXASR_HOME)
 
 LIBDIR ?=
-LIBDIR += -L. -L$(SYSTEMC_HOME)/lib-linux64 -L$(BOOST_HOME)/lib
+LIBDIR += -L. -L/cad/mentor/2024.2_1/Mgc_home/shared/lib/Linux/gcc-10.3.0-64 -L/home/users/sawyerl/miniconda3/lib
 
 ## Update 20200215 add -Wno-virtual-move-assign -Wno-unused-local-typedef
 CFLAGS ?= 
