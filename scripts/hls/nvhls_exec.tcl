@@ -161,9 +161,6 @@ namespace eval nvhls {
         solution options set ComponentLibs/SearchPath [exec readlink -f ./PEPartition/Catapult] -append
         solution library add "\[Block\] PEPartition.v1"
 
-        solution options set ComponentLibs/SearchPath [exec readlink -f ./GBPartition/GBModule/NMP/Catapult] -append
-        solution library add "\[Block\] NMP.v1"
-
         solution options set ComponentLibs/SearchPath [exec readlink -f ./GBPartition/GBModule/GBCore/Catapult] -append
         solution library add "\[Block\] GBCore.v1"
 

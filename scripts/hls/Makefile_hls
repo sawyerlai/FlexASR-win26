@@ -32,19 +32,19 @@ CONNECTIONS_HOME ?= $(CATAPULT_HOME)/Mgc_home/shared/pkgs/matchlib_connections
 RAPIDJSON_HOME ?= $(CATAPULT_HOME)/Mgc_home/shared
 MATCHLIB_HOME ?= $(CATAPULT_HOME)/Mgc_home/shared/pkgs/matchlib/cmod
 BOOST_HOME ?= /cad/xilinx/vitis/2020.1/Vitis/2020.1/cardano/tps/boost_1_64_0
-INCLUDE ?= $(REPO_TOP)/src/include
+INCLUDE ?= $(ROOT)/cmod/include $(ROOT)/cmod
 
 export ROOT           		?= $(TOT)
 export TOP_NAME       		?= $(shell basename `pwd`)
 export CLK_PERIOD     		?= 4.0
 export SRC_PATH       		?= $(ROOT)/cmod/mac
-export SEARCH_PATH    		?= $(MATCHLIB_HOME)/include $(CONNECTIONS_HOME)/include $(RAPIDJSON_HOME)/include $(BOOST_HOME) ${INCLUDE} $(REPO_TOP)/src/
+export SEARCH_PATH    		?= $(MATCHLIB_HOME)/include $(CONNECTIONS_HOME)/include $(RAPIDJSON_HOME)/include $(BOOST_HOME) ${INCLUDE}
 export HLS_CATAPULT   		?= 1
 export RUN_SCVERIFY   		?= 0
 export SYSTEMC_DESIGN 		?= 1
 export RUN_CDESIGN_CHECKER	?= 0
 export COMPILER_FLAGS 		?=
-export HLS_SCRIPTS			?= $(REPO_TOP)/scripts/hls
+export HLS_SCRIPTS			?= $(ROOT)/scripts/hls
 
 
 # SIM_MODE (SystemC code, RTL is unaffected)

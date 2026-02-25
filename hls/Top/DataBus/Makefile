@@ -12,12 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ROOT := ../..
-SRC_PATH := $(ROOT)/src/
+ROOT := ../../..
+SRC_PATH := $(ROOT)/cmod/
 SYSTEMC_DESIGN := 1
 COMPILER_FLAGS := HLS_ALGORITHMICC
 CLK_PERIOD := 4.0
 RUN_SCVERIFY := 0
-HLS_SCRIPTS := $(REPO_TOP)/scripts/hls
+HLS_SCRIPTS := $(ROOT)/scripts/hls
+
+INCLUDE := $(ROOT)/cmod/include $(ROOT)/cmod
 
 include $(HLS_SCRIPTS)/Makefile_hls
